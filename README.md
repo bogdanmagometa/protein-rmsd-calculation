@@ -5,7 +5,7 @@
 - `calc_rmsd.py` - Add `rmsd1`, `rmsd2`, `rmsd3` columns to the `metrics.csv` table, save aligned filtered PDBs.
 - `make_movies.py` - Create movies from aligned filtered PDBs.
 - `add_text_all.py` - Overlay text on all movies.
-- `arrange_grid.sh` - Arrange all moviews into one grid of specified grid width and height.
+- `arrange_grid.sh` - Arrange all movies into one grid of specified grid width and height.
 
 ## Prerequisites
 
@@ -26,6 +26,19 @@ $ conda install -c conda-forge ffmpeg   # used in add_text_all.py, add_text.sh
 ```
 
 ## Usage example
+
+Assuming the following directory tree structure:
+```
+./
+    - output/
+        - data/
+            - structures/
+                ...directories each containing true and predicted structures...
+            - metrics.csv
+    - datasets/
+        -npz_data
+            ...npz-files...
+```
 
 ```bash
 $ python3 calc_rmsd.py --data_dir ./output/data --npz_data ./datasets/npz_data
