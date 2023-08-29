@@ -30,13 +30,13 @@ $ conda install -c conda-forge ffmpeg   # used in add_text_all.py, add_text.sh
 Assuming the following directory tree structure:
 ```
 ./
-    - output/
-        - data/
-            - structures/
+    output/
+        data/
+            structures/
                 ...directories each containing true and predicted structures...
-            - metrics.csv
-    - datasets/
-        -npz_data
+            metrics.csv
+    datasets/
+        npz_data/
             ...npz-files...
 ```
 
