@@ -5,11 +5,14 @@
 - `calc_rmsd.py` - Add `rmsd1`, `rmsd2`, `rmsd3` columns to the `metrics.csv` table, save aligned filtered PDBs.
 - `make_movies.py` - Create movies from aligned filtered PDBs.
 - `add_text_all.py` - Overlay text on all movies.
-- `arrange_grid.sh` - Arrange all moviews into one grid.
+- `arrange_grid.sh` - Arrange all moviews into one grid of specified grid width and height.
 
 ## Prerequisites
 
-You need to have conda installed.
+- Linux OS
+- Maybe macOS (at least [finish_launching](https://pymolwiki.org/index.php/Launching_From_a_Script) might not work)
+- You need to have conda installed
+- To generate videos without watermarks, license might be needed. Educational license is free: https://pymol.org/edu/
 
 ## Environment setup
 
@@ -22,7 +25,7 @@ $ conda install -c conda-forge -c schrodinger pymol-bundle  # used in make_movie
 $ conda install -c conda-forge ffmpeg   # used in add_text_all.py, add_text.sh
 ```
 
-# Usage example
+## Usage example
 
 ```bash
 $ python3 calc_rmsd.py --data_dir ./output/data --npz_data ./datasets/npz_data
